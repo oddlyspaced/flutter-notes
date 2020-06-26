@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/editnote.dart';
 
 void main() {
   runApp(NotesApp());
@@ -79,9 +80,10 @@ class _NotesListState extends State<NotesList> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Scaffold.of(context).showSnackBar(SnackBar(
-                          content: Text('Tap'),
-                        ));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EditNote()),
+                        );
                       },
                       child: Card(
                         shape: RoundedRectangleBorder(
