@@ -74,12 +74,21 @@ class _NotesListState extends State<NotesList> {
     int color = 0;
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 0,
+        child: Icon(
+          Icons.add,
+        ),
+        onPressed: () {
+
+        },
+      ),
       backgroundColor: Color.fromARGB(255, 37, 37, 37),
       body: SingleChildScrollView(
         child: Center(
           child: Wrap(
               alignment: WrapAlignment.start,
-              children: List.generate(9, (index) => index).map((i) {
+              children: List.generate(7, (index) => index).map((i) {
                 bool left = i % 2 == 0; // left = true, right = false
                 if (color == colors.length) color = 0;
 
@@ -96,7 +105,9 @@ class _NotesListState extends State<NotesList> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => EditNote()),
+                          MaterialPageRoute(builder: (context) => EditNote(
+                            note: i.toString()
+                          )),
                         );
                       },
                       child: Card(
