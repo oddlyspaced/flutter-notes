@@ -10,9 +10,19 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(255, 37, 37, 37), //or set color with: Color(0xFF0000FF)
+      statusBarColor: Color.fromARGB(
+          255, 37, 37, 37), //or set color with: Color(0xFF0000FF)
     ));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        brightness: Brightness.light,
+        primaryColor: Color.fromARGB(255, 37, 37, 37),
+        accentColor: Color.fromARGB(255, 59, 59, 59),
+        // Define the default font family.
+        fontFamily: 'GoogleSans',
+      ),
       title: 'Notes',
       home: NotesHome(),
     );
@@ -105,7 +115,6 @@ class _NotesListState extends State<NotesList> {
                                 child: Text(
                                   "How to make your personal brand stand out online",
                                   style: TextStyle(
-                                    fontFamily: "GoogleSans",
                                     fontSize: 18,
                                   ),
                                 ),
@@ -113,7 +122,6 @@ class _NotesListState extends State<NotesList> {
                               Text(
                                 "May 21,2020",
                                 style: TextStyle(
-                                  fontFamily: "GoogleSans",
                                   color: Color.fromARGB(100, 0, 0, 0),
                                 ),
                               ),
@@ -146,7 +154,6 @@ class _NotesHomeState extends State<NotesHome> {
         title: Text(
           "Notes",
           style: TextStyle(
-            fontFamily: "GoogleSans",
             fontSize: 36,
           ),
         ),

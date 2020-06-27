@@ -31,7 +31,7 @@ class _EditNoteState extends State<EditNote> {
               child: Card(
                 color: Color.fromARGB(255, 59, 59, 59),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 child: Container(
                     margin: EdgeInsets.fromLTRB(13.5, 9, 13.5, 9),
@@ -103,7 +103,6 @@ class _EditNoteBodyState extends State<EditNoteBody> {
                     "Beautiful weather app UI concepts we wish existed",
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: "GoogleSans",
                         fontWeight: FontWeight.bold,
                         fontSize: 32),
                   ),
@@ -117,7 +116,6 @@ class _EditNoteBodyState extends State<EditNoteBody> {
                     "May 21, 2020",
                     style: TextStyle(
                         color: Colors.white24,
-                        fontFamily: "GoogleSans",
                         fontSize: 20),
                   ),
                 ),
@@ -130,7 +128,6 @@ class _EditNoteBodyState extends State<EditNoteBody> {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                     style: TextStyle(
                         color: Colors.white70,
-                        fontFamily: "GoogleSans",
                         fontSize: 20),
                   ),
                 ),
