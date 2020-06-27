@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class EditNote extends StatefulWidget {
   @override
@@ -8,28 +9,69 @@ class EditNote extends StatefulWidget {
 class _EditNoteState extends State<EditNote> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Color.fromARGB(255, 37, 37, 37), //or set color with: Color(0xFF0000FF)
+    ));
     return Scaffold(
       key: Key("_scaffold"),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         actions: <Widget>[
-          Card(
-            color: Color.fromARGB(255, 59, 59, 59),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Container(
-              margin: EdgeInsets.fromLTRB(13.5, 9, 13.5, 9),
-              child: Icon(Icons.edit)
-            ),
-          )
-        ],
-        leading: Card(
-          color: Color.fromARGB(255, 59, 59, 59),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
+          Container(
+            width: 18,
           ),
-          child: Icon(Icons.arrow_back_ios),
-        ),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: 18,
+              ),
+              child: Card(
+                color: Color.fromARGB(255, 59, 59, 59),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(13.5, 9, 13.5, 9),
+                    child: Icon(Icons.arrow_back_ios)),
+              ),
+            ),
+          ),
+          Spacer(),
+          Padding(
+            padding: EdgeInsets.only(
+              right: 18,
+            ),
+            child: Card(
+              color: Color.fromARGB(255, 59, 59, 59),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Container(
+                  margin: EdgeInsets.fromLTRB(13.5, 9, 13.5, 9),
+                  child: Icon(Icons.edit)),
+            ),
+          ),
+        ],
+        /*leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 18,
+            ),
+            child: Card(
+              color: Color.fromARGB(255, 59, 59, 59),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Icon(Icons.arrow_back_ios),
+            ),
+          ),
+        ),*/
         backgroundColor: Color.fromARGB(255, 37, 37, 37),
         elevation: 0,
       ),
